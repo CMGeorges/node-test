@@ -3,9 +3,6 @@ env:
   - IMAGENAME=cmgeorges/nodetest
 services:
     - docker
-before_install:
-    - docker build -t ${IMAGENAME} .
-    #- docker images cmgeorges/node
 script:
     #- docker image build -t ${IMAGENAME} .
     - docker images ${IMAGENAME}
