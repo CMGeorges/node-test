@@ -1,7 +1,9 @@
 sudo: required
+env:
+  - IMAGENAME=cmgeorges/nodetest
 services:
     - docker
 script:
-    - docker image build -t cmgeorges/node .
-    - docker images cmgeorges/node
+    - docker image build -t ${IMAGENAME} .
+    #- docker images cmgeorges/node
 
