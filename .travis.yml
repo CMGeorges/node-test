@@ -2,5 +2,6 @@ sudo: required
 services:
     - docker
 script:
-    - docker build -t cmgeorges/node .
+    - docker image build -t cmgeorges/node .
     - docker images cmgeorges/node
+
