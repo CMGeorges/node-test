@@ -4,7 +4,7 @@ env:
 services:
     - docker
 before_install:
-    - docker image build -t ${IMAGENAME} .
+    - docker build -t ${IMAGENAME} .
     #- docker images cmgeorges/node
 script:
     #- docker image build -t ${IMAGENAME} .
