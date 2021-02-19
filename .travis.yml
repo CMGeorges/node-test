@@ -3,12 +3,22 @@ env:
   - IMAGENAME=cmgeorges/node-test
 services:
     - docker
-before_install:
-  - docker build -t ${IMAGENAME} .
-  - docker ps -a
+
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+# before_install:
+#   - docker build -t ${IMAGENAME} .
+#   - docker ps -a
 script:
-    #- docker image build -t ${IMAGENAME} .
-    - docker images ${IMAGENAME}
+    - docker --version
+    - docker build -t ${IMAGENAME} .
+    #- docker images ${IMAGENAME}
     - docker tag ${IMAGENAME} ${IMAGENAME}:latest
 
 
