@@ -1,8 +1,11 @@
 sudo: required
 env:
-  - IMAGENAME=cmgeorges/node-test
+  - IMAGENAME=CMGeorges/node-test
 services:
     - docker
+before_install:
+  - docker build -t ${IMAGENAME} .
+  - docker ps -a
 script:
     #- docker image build -t ${IMAGENAME} .
     - docker images ${IMAGENAME}
