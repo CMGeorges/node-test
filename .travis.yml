@@ -22,7 +22,7 @@ script:
     - docker tag ${IMAGENAME} ${IMAGENAME}:latest
 
 after_success:
-  - echo "$PWD" | docker login -u "$USERNAME" --password-stdin CMGeorges@github.com
+  - echo "$PWD" | docker login -u "$USERNAME" --password-stdin cmg.goldtenlegacy@gmail.com
   - docker push ${IMAGENAME}
 # deploy:
 #   provider: script
