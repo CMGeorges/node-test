@@ -2,7 +2,7 @@ FROM node
 
 RUN mkdir /usr/src/app
 RUN apt-get update && apt-get upgrade -y && apt-get install -y nodejs && npm i -g npm
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/
 
 ENV PATH /usr/src/app/node_modules/.bin:PATH
 
