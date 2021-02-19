@@ -7,8 +7,6 @@ script:
     #- docker image build -t ${IMAGENAME} .
     - docker images ${IMAGENAME}
 
-before_deploy:
-    - docker login -u ${USERNAME} --password-stdin
 
 deploy:
   provider: script
