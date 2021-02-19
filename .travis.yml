@@ -9,6 +9,7 @@ before_install:
 script:
     #- docker image build -t ${IMAGENAME} .
     - docker images ${IMAGENAME}
+    - docker tag ${IMAGENAME} ${IMAGENAME}:latest
 
 
 deploy:
