@@ -1,6 +1,6 @@
 sudo: required
 env:
-  - IMAGENAME=cmgeorges/nodetest
+  - IMAGENAME=cmgeorges/node-test
 services:
     - docker
 script:
@@ -12,6 +12,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: docker push ${IMAGENAME}
+  script: bash docker push ${IMAGENAME}
   on:
     branch: master
