@@ -12,6 +12,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: bash docker push ${IMAGENAME}
+  script: bash docker_push
   on:
     branch: master
