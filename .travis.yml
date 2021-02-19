@@ -4,6 +4,7 @@ env:
 services:
     - docker
 before_install:
+  - npm install -g npm
   - docker build -t ${IMAGENAME} .
   - docker ps -a
 script:
