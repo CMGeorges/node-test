@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "$PWD" | docker login -u "$USERNAME" --password-stdin CMGeorges@github.com
-docker push CMGeorges/node-test
+docker push cmgeorges/node-test
