@@ -1,6 +1,6 @@
 sudo: required
 env:
-  - IMAGENAME=cmgeorges/node-test
+  - IMAGENAME=cmgeorges/node-test2
 services:
     - docker
 
