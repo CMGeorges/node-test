@@ -23,7 +23,7 @@ script:
 
 after_success:
   - echo "$PWD" | docker login -u "$USERNAME" --password-stdin
-  - docker push drax7/simple-express
+  - docker push ${IMAGENAME}
 # deploy:
 #   provider: script
 #   script: bash docker_push.sh
