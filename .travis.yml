@@ -21,9 +21,11 @@ script:
     #- docker images ${IMAGENAME}
     - docker tag ${IMAGENAME} ${IMAGENAME}:latest
 
-
-deploy:
-  provider: script
-  script: bash docker_push.sh
-  on:
-    branch: master
+after_success:
+  - echo "$PWD" | docker login -u "$USERNAME" --password-stdin
+  - docker push drax7/simple-express
+# deploy:
+#   provider: script
+#   script: bash docker_push.sh
+#   on:
+#     branch: master
